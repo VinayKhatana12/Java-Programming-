@@ -12,41 +12,13 @@ public class Recursion {
         return n * factorial(n - 1);
     }
 
-    public static int binarySearch(int[] arr, int target) {
-        int low = 0;
-        int high = arr.length - 1;
-        int mid = low + (high - low) / 2;
-        while (low <= high) {
-            mid = low+(high-low)/2;
-            if (arr[mid] == target) {
-                return mid;
-            } else if (arr[mid] < target) low = mid + 1;
-            else {
-                high = mid - 1;
-            }
-        }
-        return -1;
-    }
-//    public static int smallestInArray(int[] arr){
-//        int smallest = Integer.INT_MIN;
-//        for(int i=1;i<arr.length;i++){
-//
-//            if
-//        }
 
 
-    }
 
         public static void main (String[]args){
             Scanner sc = new Scanner(System.in);
-            int Size = sc.nextInt();
-            int[] arr = new int[Size];
-            for (int i = 0; i < Size; i++) {
-                arr[i] = sc.nextInt();
-            }
-            int Target = sc.nextInt();
-
-            System.out.println(binarySearch(arr, Target));
+            int size = sc.nextInt();
+            print(size);
         }
     }
 
